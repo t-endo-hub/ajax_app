@@ -1,0 +1,9 @@
+  <% if post.favorited_by?(current_user) %>
+    <%= link_to post_favorites_path(post), method: :DELETE do %>
+      <span class="btn btn-danger">いいね外す</span>
+    <% end %>
+  <% else %>
+    <%= link_to post_favorites_path(post), method: :POST do %>
+      <span class="btn btn-primary">いいねする</span>
+    <% end %>
+  <% end %>
